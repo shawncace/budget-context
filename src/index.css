@@ -1,13 +1,128 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.project-container {
+  margin: 1rem;
+  margin-top: 2rem;
+}
+
+.money-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* outline: 1px solid red; */
+}
+
+.income-container {
+  background-color: teal;
+  color: rgb(231, 231, 231);
+  padding: 1rem;
+  border-radius: 3px;
+}
+
+.totalExpenses-container {
+  background-color: rgb(187, 138, 3);
+  color: rgb(231, 231, 231);
+  padding: 1rem;
+  border-radius: 3px;
+}
+
+.expenses-wrapper {
+  margin: 1rem;
+}
+
+.savings-container {
+  color: rgb(231, 231, 231);
+  padding: 1rem;
+  border-radius: 3px;
+}
+
+.savings-good {
+  background-color: rgb(69, 173, 112);
+}
+
+.savings-bad {
+  background-color: rgb(182, 59, 43);
+}
+
+.expense-chart {
+  margin-top: 1rem;
+}
+
+.expense-chart ul {
+  list-style: none;
+  font-size: 1rem;
+}
+
+.expense-chart li {
+  border: 0.25px solid rgb(194, 194, 194);
+  font-size: larger;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1rem;
+}
+
+.expense-chart span {
+  margin-right: 5%;
+  font-weight: bold;
+}
+
+.trash {
+  color: rgb(180, 8, 8);
+  margin-left: 1rem;
+}
+
+form {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.05rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-container {
+  margin-right: 1.5rem;
+}
+
+.form-control {
+  margin-right: 1rem;
+}
+
+input:focus {
+  outline: none;
+  background-color: lightblue;
+  border: 2px solid lightblue;
+}
+
+button {
+  font-family: inherit;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(145, 88, 199);
+}
+
+button:active {
+  transform: translate(0.98);
 }
