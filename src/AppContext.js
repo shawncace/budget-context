@@ -2,7 +2,7 @@ import {createContext, useState} from 'react';
 
 export const AppContext = createContext()
 
-const AppContextProvider = () =>{
+const AppContextProvider = (props) =>{
   const [expenseListArray, setExpenseListArray]=useState([])
 
   return(
@@ -11,6 +11,7 @@ const AppContextProvider = () =>{
         expenseListArray,
         setExpenseListArray
       }}>
+        {props.children}
     </AppContext.Provider>
   )
 }

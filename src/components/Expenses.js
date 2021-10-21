@@ -1,7 +1,9 @@
 import ExpenseItem from "./ExpenseItem";
+import { AppContext } from "../AppContext";
+import { useContext } from "react";
+const Expenses = ({FontAwesomeIcon, faTrash}) => {
 
-
-const Expenses = ({FontAwesomeIcon, faTrash, expenseListArray, setExpenseListArray}) => {
+  const {expenseListArray, setExpenseListArray}=useContext(AppContext)
   
     function handleDeleteItem(expense, id){
       setExpenseListArray(expenseListArray.filter((expense)=> expense.id !== id ))

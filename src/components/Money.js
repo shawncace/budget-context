@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { AppContext } from "../AppContext";
 
-const Money = ({expenseListArray}) => {
+const Money = () => {
+  const {expenseListArray}=useContext(AppContext)
+  
   const incomeTotal = 800;
   
   const totalExpenseCost = 

@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { AppContext } from "../AppContext";
 
-const Form = ({expenseListArray, setExpenseListArray}) => {
+const Form = () => {
+  const {expenseListArray, setExpenseListArray}=useContext(AppContext)
+
   const [newItemValue, setNewItemValue]=useState('')
   const [newCostValue, setNewCostValue]=useState('')
 
