@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import { AppContext } from "../AppContext";
 
 const Form = () => {
-  const {expenseListArray, setExpenseListArray}=useContext(AppContext)
+  const {dispatch}=useContext(AppContext)
 
   const [newItemValue, setNewItemValue]=useState('')
   const [newCostValue, setNewCostValue]=useState('')
@@ -15,7 +15,10 @@ const Form = () => {
      expenseItem: newItemValue,
      expenseCost: parseInt(newCostValue)}
     
-    setExpenseListArray([...expenseListArray, newExpense])
+    dispatch({
+      type: 'ADD_EXPENSE',
+      payload: newExpense
+    })
     
     setNewItemValue('')
     setNewCostValue('')

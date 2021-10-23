@@ -1,6 +1,7 @@
 import ExpenseItem from "./ExpenseItem";
 import { AppContext } from "../AppContext";
 import { useContext } from "react";
+
 const Expenses = ({FontAwesomeIcon, faTrash}) => {
 
   const {expenseListArray, setExpenseListArray}=useContext(AppContext)
